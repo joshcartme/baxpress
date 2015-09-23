@@ -1,0 +1,24 @@
+{
+  "name": "backbonetest",
+  "version": "0.0.0",
+  "description": "Test of backbone",
+  "main": "app.js",
+  "scripts": {
+    "watch": "watchify client.js -o static/app.js -v",
+    "build": "browserify client.js -o static/app.js",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "express": "^4.13.3",
+    "hbs": "^3.1.1",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "browserify": "^11.1.0",
+    "nodemon": "^1.7.0",
+    "watchify": "^3.4.0"
+  }
+}
