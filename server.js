@@ -8,7 +8,7 @@ var app = express();
 
 app.engine('html', hbs.__express);
 
-var someJson = [
+var somethingJSON = [
   1,
   2,
   3
@@ -20,8 +20,8 @@ app.get('/', function (req, res) {
   res.render('index.html');
 });
 
-app.get('/json', function (req, res) {
-  res.json(someJson);
+app.get('/tweets', function (req, res) {
+  res.json(somethingJSON);
 });
 
 var server = app.listen(3000, function () {
