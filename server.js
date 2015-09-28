@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
   res.render('index.html');
 });
 
-app.get('/tweets', function (req, res) {
+app.get('/json', function (req, res) {
   res.json(somethingJSON);
 });
 

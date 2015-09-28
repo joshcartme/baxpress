@@ -25,7 +25,15 @@ var Backbone = require('backbone');
             $('.main').html("<h1>This is baxpress!</h1><a href='/help'>Help</a>");
         },
         help: function() {
-            $('.main').html("<h2>You're on your own...</h2><a href='/'>Home</a>");
+            var body = "<h2>You're on your own...</h2><a href='/'>Home</a>";
+            $.getJSON('/json', function(data){
+                body += "<ul>";
+                $.each(data, function(idx, val){
+                    body += "<li>" + val + "</li>";
+                });
+                body += "</ul>";
+                $('.main').html(body);
+            });
         }
     });
 
